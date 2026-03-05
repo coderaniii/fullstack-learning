@@ -1,0 +1,11 @@
+/* Selects the first paragraph inside any div */
+div p:first-child{
+    background-color: yellow; /* background yellow */
+    color: red; /* text color red */
+}
+
+/* Selects all paragraphs inside div */
+div p{
+    background-color: blue; /* background blue */
+    color: white; /* text color white */
+}
