@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Cascade and Specificity Tutorial</title>
+
+<style>
+
+/* ---------------------------
+   EXAMPLE 1 : CASCADE (ORDER)
+   ---------------------------
+   If two selectors have SAME specificity,
+   the one written later in CSS wins.
+*/
+
+p{
+    color: blue; /* This will apply first */
+}
+
+p{
+    color: green; /* This overrides the above because it appears later */
+}
+
+
+/* ---------------------------
+   EXAMPLE 2 : CLASS vs ELEMENT
+   ---------------------------
+   Class selectors are more specific than element selectors
+*/
+
+h2{
+    color: purple; /* element selector */
+}
+
+.heading{
+    color: red; /* class selector (higher specificity) */
+}
+
+
+/* ---------------------------
+   EXAMPLE 3 : ID vs CLASS
+   ---------------------------
+   ID selectors have higher specificity than class selectors
+*/
+
+.text{
+    color: blue;
+}
+
+#special{
+    color: orange;
+}
+
+
+/* ---------------------------
+   EXAMPLE 4 : INLINE STYLE
+   ---------------------------
+   Inline styles have higher priority than CSS rules
+*/
+
+
+/* ---------------------------
+   EXAMPLE 5 : !important
+   ---------------------------
+   !important overrides almost everything
+*/
+
+.importantText{
+    color: green !important;
+}
+
+#importantID{
+    color: red;
+}
+
+
+/* ---------------------------
+   EXAMPLE 6 : MORE SPECIFIC SELECTOR
+   ---------------------------
+   A more detailed selector wins
+*/
+
+div p{
+    color: brown;
+}
+
+div.container p{
+    color: teal;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<h1>CSS Cascade and Specificity Examples</h1>
+
+
+<!-- Example 1 -->
+<h3>1. Cascade (Order of CSS)</h3>
+<p>This paragraph will be GREEN because the later rule overrides the earlier rule.</p>
+
+
+<!-- Example 2 -->
+<h3>2. Class vs Element Specificity</h3>
+<h2 class="heading">This text becomes RED because class selector beats element selector.</h2>
+
+
+<!-- Example 3 -->
+<h3>3. ID vs Class</h3>
+<p class="text" id="special">
+This text becomes ORANGE because ID selector beats class selector.
+</p>
+
+
+<!-- Example 4 -->
+<h3>4. Inline Style Priority</h3>
+<p style="color: pink;">
+This text is PINK because inline style overrides internal CSS.
+</p>
+
+
+<!-- Example 5 -->
+<h3>5. !important Rule</h3>
+<p class="importantText" id="importantID">
+This text becomes GREEN because !important overrides even ID.
+</p>
+
+
+<!-- Example 6 -->
+<h3>6. More Specific Selector</h3>
+
+<div class="container">
+<p>
+This text becomes TEAL because "div.container p" is more specific than "div p".
+</p>
+</div>
+
+
+</body>
+</html>
