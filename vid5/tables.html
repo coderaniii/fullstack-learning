@@ -1,0 +1,97 @@
+<!DOCTYPE html> <!-- Defines HTML5 document -->
+
+<html> <!-- Root element of HTML document -->
+
+<head> <!-- Contains metadata and page settings -->
+    <title>HTML Tables Tutorial</title> <!-- Title shown on browser tab -->
+
+    <style>
+        table { 
+            border-collapse: collapse; /* Merges adjacent table borders into one */
+            width: 70%; /* Sets table width */
+        }
+
+        th, td { 
+            border: 1px solid black; /* Adds border to table cells */
+            padding: 10px; /* Adds space inside each cell */
+            text-align: center; /* Aligns text horizontally */
+        }
+
+        th {
+            background-color: lightgray; /* Adds background color to header cells */
+        }
+
+        caption {
+            font-size: 20px; /* Styles table caption text */
+            margin: 10px; /* Adds space around caption */
+        }
+    </style>
+</head>
+
+<body> <!-- Main visible content of webpage -->
+
+    <table> <!-- <table> creates a table container -->
+
+        <caption>Student Marks Table</caption> <!-- <caption> adds a title to the table -->
+
+        <thead> <!-- <thead> groups header rows of the table -->
+            <tr> <!-- <tr> defines a table row -->
+
+                <th>ID</th> <!-- <th> defines a header cell (bold + centered by default) -->
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+
+            </tr>
+        </thead>
+
+        <tbody> <!-- <tbody> groups the main data rows -->
+
+            <tr> <!-- First data row -->
+                <td>1</td> <!-- <td> defines a normal table cell -->
+                <td>Amit</td>
+                <td>Math</td>
+                <td>90</td>
+            </tr>
+
+            <tr> <!-- Second data row -->
+                <td>2</td>
+                <td>Priya</td>
+                <td>Science</td>
+                <td>85</td>
+            </tr>
+
+            <tr> <!-- Third data row demonstrating colspan -->
+                <td>3</td>
+                <td>Rahul</td>
+                <td colspan="2">Computer - 95</td> 
+                <!-- colspan merges multiple columns into one cell -->
+            </tr>
+
+            <tr> <!-- Fourth row demonstrating rowspan -->
+                <td rowspan="2">4</td> 
+                <!-- rowspan merges multiple rows into one cell vertically -->
+                <td>Anita</td>
+                <td>English</td>
+                <td>88</td>
+            </tr>
+
+            <tr> <!-- Row affected by rowspan above -->
+                <td>Anita</td>
+                <td>History</td>
+                <td>92</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot> <!-- <tfoot> groups footer rows like totals or summaries -->
+            <tr>
+                <td colspan="3">Average Marks</td> <!-- colspan used again for footer summary -->
+                <td>90</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+</html>

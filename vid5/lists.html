@@ -1,0 +1,108 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+
+<html> <!-- Root element that wraps the entire HTML page -->
+
+<head> <!-- Contains metadata and page information -->
+    <title>HTML Lists Tutorial</title> <!-- Title displayed in browser tab -->
+
+    <style>
+        ul {
+            list-style-type: square; /* Changes bullet style of unordered list */
+        }
+
+        ol {
+            list-style-type: upper-roman; /* Changes numbering style of ordered list */
+        }
+
+        li {
+            margin: 5px; /* Adds space between list items */
+        }
+    </style>
+</head>
+
+<body> <!-- Contains visible content of the webpage -->
+
+    <h2>HTML Lists Examples</h2> <!-- Heading for the page -->
+
+    <!-- UNORDERED LIST -->
+    <ul> <!-- <ul> creates an unordered list (bulleted list) -->
+
+        <li>Apple</li> <!-- <li> defines a list item -->
+        <li>Banana</li>
+        <li>Mango</li>
+
+    </ul>
+
+    <!-- ORDERED LIST -->
+    <ol> <!-- <ol> creates an ordered list (numbered list) -->
+
+        <li>Wake Up</li>
+        <li>Brush Teeth</li>
+        <li>Go to College</li>
+
+    </ol>
+
+    <!-- ORDERED LIST WITH TYPE ATTRIBUTE -->
+    <ol type="A"> <!-- type attribute changes numbering style (A,B,C...) -->
+
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+
+    </ol>
+
+    <!-- ORDERED LIST WITH START ATTRIBUTE -->
+    <ol start="5"> <!-- start attribute defines the starting number of the list -->
+
+        <li>Step Five</li>
+        <li>Step Six</li>
+        <li>Step Seven</li>
+
+    </ol>
+
+    <!-- NESTED LIST -->
+    <ul> <!-- Parent unordered list -->
+
+        <li>Frontend <!-- List item containing another list -->
+
+            <ul> <!-- Nested unordered list (list inside list) -->
+
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+
+            </ul>
+
+        </li>
+
+        <li>Backend
+
+            <ul> <!-- Another nested list -->
+
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>Java</li>
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+    <!-- DESCRIPTION LIST -->
+    <dl> <!-- <dl> defines a description list (term + description pair) -->
+
+        <dt>HTML</dt> <!-- <dt> defines the term/name in description list -->
+        <dd>HyperText Markup Language</dd> <!-- <dd> describes the term -->
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+
+        <dt>JS</dt>
+        <dd>JavaScript used for webpage interactivity</dd>
+
+    </dl>
+
+</body>
+
+</html>
