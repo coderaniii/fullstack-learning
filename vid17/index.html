@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <a href="https://www.google.com">Go to Google</a>
+    <style>
+        /* Element selector 
+        div{
+            background-color: red;;
+        }   */
+        /*Class Selector*/
+        .red{
+            background-color: red;
+        }
+        /*Id Selector*/
+        #green{
+            background-color: green;
+        }
+        /*Child Selectors-div ke directly andar agar p hua,then ye apply hoga*/
+        div > p{
+            background-color: brown;
+            color:blue
+        }
+        /*Descendant Selector-div ke andar agar p hua,then ye apply hoga,chahe aage bhi ho*/
+        div p{
+            background-color: lightblue;
+            color: black;
+        }
+        /*Universal Selector-ye sabhi element pe apply hoga*/
+        a:visited{
+            color:antiquewhite
+        }
+        a:link{     /*jo link visit nhi hua hai,uska color ye rahega*/
+            color:blue
+        }
+        a:active{   /*jo link pe click kar rahe hai,uska color ye rahega*/
+            color:green
+        }
+        a:hover{    /*jo link pe mouse le ja rahe hai,uska color ye rahega*/
+            color:orange
+        }
+        *{
+            margin:0;
+            padding:0;
+        }
+        p:first-child{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </div>
+    <div class="red">I am a div
+        <p>I am a paragraph inside the div.</p>
+    </div>
+    <div class="red">I am a div
+        <artcile>
+            <p>I am a paragraph inside the div.</p>
+        </artcile>
+    </div>
+
+
+    <div id="green">I am another div.</div>
+</body>
+</html>
