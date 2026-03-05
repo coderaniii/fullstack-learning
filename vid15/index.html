@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline,Internal and External CSS</title>
+</head>
+<body>
+    <h1 style="color:yellow;background-color: red;">Three ways to add CSS to HTML</h1>
+    <div>
+        <ol>
+            <li>Inline CSS</li>
+        </ol>
+    </div>
+    <p>Everyone is good in some way or the other.Does this even make any sense?</p>
+
+<div>
+    <style>
+        h1{
+            background-color: red;
+            color: yellow;
+        }
+    </style>
+    <ol>
+        <li>Internal CSS</li>
+    </ol>
+</div>
+
+Inline:Adding CSS directly to the HTML element using the style attribute.(Prefer not using)
+Internal: Placing CSS within a style tag in the head section of the HTML document.(For small websites)
+External: Linking to an external CSS file using the link tag in the head section of the HTML document.(For big websites)
+
+
+<link rel="stylesheet" href="style.css">
+
+
+
+
+</body>
+</html>
